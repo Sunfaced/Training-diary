@@ -29,3 +29,35 @@ li {
   margin: 0 auto;
   padding: 0 10px;
 }
+
+.textFields {
+  display: flex;
+  gap: 30px;
+  max-width: 50%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 5px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 2rem; /* Уменьшаем размер заголовка на мобильных устройствах */
+  }
+
+  .textFields {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .textFields > * {
+    flex: none;
+    width: 100%;
+  }
+}

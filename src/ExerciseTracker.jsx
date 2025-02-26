@@ -86,9 +86,10 @@ const ExerciseTracker = () => {
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
+          flexWrap: "wrap",
         }}
       >
-        <h1 style={{ letterSpacing: "5px", fontSize: "3rem" }}>
+        <h1 style={{ letterSpacing: "5px", fontSize: "3rem",  marginRight: "10px", }}>
           TRAINING DIARY
         </h1>
         <TextField
@@ -96,7 +97,7 @@ const ExerciseTracker = () => {
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          style={{ marginRight: "10px" }}
+          style={{ flex: "1 0 200px" }}
         />
       </header>
       <FormControl
@@ -118,10 +119,7 @@ const ExerciseTracker = () => {
           ))}
         </Select>
       </FormControl>
-      <div
-        className="textFields"
-        style={{ display: "flex", gap: "30px", maxWidth: "50%" }}
-      >
+      <div className="textFields">
         <TextField
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
